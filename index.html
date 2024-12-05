@@ -21,10 +21,10 @@
   <meta property="twitter:image" content="https://aboutryan.com/ryan-provost-lake-nature.jpg">
   
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/@coreui/icons@3.0.1/css/all.min.css" rel="stylesheet">
+
   <style>
     body {
-      /* background: url(https://aboutryan.com/hawaii.jpg) no-repeat center center fixed; */
       background-color: #708090;
       background-size: cover;
       color: #272e34;
@@ -59,11 +59,9 @@
 
     ul.social { height: 3em; }
     ul.social li { display: inline-block; padding: 0 .75em; }
+    ul.social li a:hover { text-decoration: none; }
 
-    i.fab { font-size: 3em; }
-    /* i.fab.fa-linkedin { color: #0077B5; } */
-    /* i.fab.fa-twitter { color: #00ACED } */
-    /* i.fab.fa-github { color: #000; } */
+    i.cib { font-size: 3em; }
 
     copyright { clear: both; font-size: .75em; }
 
@@ -88,8 +86,6 @@
 <body>
 
 <div class="container">
-  <!-- <img class="banner" src="https://aboutryan.com/ryan-provost-lake-nature.jpg" alt="Ryan Provost speaking @TechDuels @GA"> -->
-
   <h1>Ryan Provost</h1>
   <hr>
   <!-- <p>I build high-functioning teams that deliver engaging digital experiences. Focused on running healthy and successful businesses, I am a sought-after coach and mentor with extensive experience across executive, digital transformation, architecture, delivery, and hands-on technical roles. I lead development teams that build client apps and enterprise backend systems and believe that experience architecture is just as important as technical architecture. I lead with empathy to encourage and motivate everyone to deliver the best version of themselves.</p> -->
@@ -114,15 +110,16 @@
   • <a href="https://www.charitywater.org/ryanprovost">Charity: Water</a>
   
   <ul class="social">
-    <li><a href="https://www.linkedin.com/in/ryanprovost/" title="Professional Profile"><i class="fab fa-linkedin"></i></a></li>
-    <li><a href="https://www.twitter.com/@rprovost/" title="Tweets"><i class="fab fa-twitter"></i></a></li>
-    <li><a href="https://www.instagram.com/provost.ryan/" title="Photography"><i class="fab fa-instagram"></i></a></li>
-    <li><a href="https://stackoverflow.com/users/27450604" title="Stack Overflow"><i class="fab fa-stack-overflow"></i></a></li>
-    <li><a href="https://www.hackerrank.com/profile/ryan568" title="HackerRank"><i class="fab fa-hackerrank"></i></a></li>
-    <li><a href="https://github.com/rprovost" title="Code"><i class="fab fa-github"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/ryanprovost/" title="Professional Profile"><i class="cib cib-linkedin"></i></a></li>
+    <li><a href="https://www.twitter.com/@rprovost/" title="Tweets"><i class="cib cib-twitter"></i></a></li>
+    <li><a href="https://www.instagram.com/provost.ryan/" title="Photography"><i class="cib cib-instagram"></i></a></li>
+    <li><a href="https://stackoverflow.com/users/27450604" title="Stack Overflow"><i class="cib cib-stackoverflow"></i></a></li>
+    <!-- <li><a href="https://www.hackerrank.com/profile/ryan568" title="HackerRank"><i class="cib cib-hackerrank"></i></a></li> -->
+    <li><a href="https://leetcode.com/u/ryan-provost/" title="LeetCode"><i class="cib cib-leetcode"></i></a></li>
+    <li><a href="https://github.com/rprovost" title="Code"><i class="cib cib-github"></i></a></li>
   </ul>  
 
-  <copyright>&copy;2019-2024 Ryan Provost</copyright>
+  <copyright>&copy;2019-<script>document.write(/\d{4}/.exec(Date())[0])</script> Ryan Provost</copyright>
 </div>
 
 </body>
