@@ -1,136 +1,917 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <!-- Primary Meta Tags -->
-  <title>Ryan Provost -- Leader • Speaker • Perpetual Learner • Developer • Human • Comfortably Uncomfortable</title>
-  <meta name="title" content="Ryan Provost -- Experience Architect • Coach • Perpetual Learner • Developer • Human • Comfortably Uncomfortable">
-  <meta name="description" content="I build high-functioning teams that deliver engaging digital experiences. Focused on running healthy and successful businesses, I am a sought-after coach and mentor with extensive experience across executive, digital transformation, architecture, delivery, and hands-on technical roles. I lead development teams that build client apps and enterprise backend systems and believe that experience architecture is just as important as technical architecture. I lead with empathy to encourage and motivate everyone to deliver the best version of themselves.">
-  <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://aboutryan.com/">
-  <meta property="og:title" content="Ryan Provost -- Experience Architect • Coach • Developer • Pilot • Perpetual Learner • Comfortably Uncomfortable">
-  <meta property="og:description" content="I build high-functioning teams that deliver engaging digital experiences. Focused on running healthy and successful businesses, I am a sought-after coach, and mentor with extensive experience across executive, digital transformation, architecture, delivery, and hands-on technical roles. I lead development teams that build both client-apps and enterprise backend systems and believe that experience architecture is just as important as technical architecture. I lead with empathy to encourage and motivate everyone to deliver the best version of themselves.">
-  <meta property="og:image" content="https://aboutryan.com/ryan-provost-lake-nature.jpg">
+  <title>Ryan Provost — Executive Technology &amp; Delivery Leader</title>
+  <meta name="description" content="Ryan Provost is an executive technology and delivery leader specializing in platform modernization, experience architecture, and high-stakes program execution." />
+  <link rel="canonical" href="https://aboutryan.com/" />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://aboutryan.com/">
-  <meta property="twitter:title" content="Ryan Provost -- Experience Architect • Coach • Developer • Pilot • Perpetual Learner • Comfortably Uncomfortable">
-  <meta property="twitter:description" content="I build high-functioning teams that deliver engaging digital experiences. Focused on running healthy and successful businesses, I am a sought-after coach, and mentor with extensive experience across executive, digital transformation, architecture, delivery, and hands-on technical roles. I lead development teams that build both client-apps and enterprise backend systems and believe that experience architecture is just as important as technical architecture. I lead with empathy to encourage and motivate everyone to deliver the best version of themselves.">
-  <meta property="twitter:image" content="https://aboutryan.com/ryan-provost-lake-nature.jpg">
-  
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@coreui/icons@3.0.1/css/all.min.css" rel="stylesheet">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ryan Provost — Executive, Speaker, Advisor" />
+  <meta property="og:description" content="Executive technology & delivery leader. Speaker, coach, and board advisor focused on scalable execution, platform strategy, and durable outcomes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aboutryan.com/" />
+  <meta property="og:image" content="https://aboutryan.com/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Ryan Provost — Executive, Speaker, Coach, Board & Advisory" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ryan Provost — Executive, Speaker, Advisor" />
+  <meta name="twitter:description" content="Executive technology & delivery leader. Speaker, coach, and board advisor focused on scalable execution and durable outcomes." />
+  <meta name="twitter:image" content="https://aboutryan.com/og.png" />
+
+  <!-- Source Sans Pro (via Source Sans 3) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <style>
-    body {
-      background-color: #708090;
-      background-size: cover;
-      color: #272e34;
-      display: flex;
-      flex-direction: column;
-      font-family: 'Source Sans Pro', sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      height: 100%;
-      justify-content: center;
-      line-height: 1.5em;
-      resize: both;
-      text-align: center;
+    :root{
+      --bg:#ffffff;
+      --ink:#0f172a;
+      --muted:#475569;
+      --subtle:#e5e7eb;
+      --accent:#2563eb;
+      --accent-soft:#eff6ff;
+      --radius:14px;
+      --max:1100px;
+      --sans:"Source Sans 3","Source Sans Pro",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      font-size:16px;
     }
 
-    .container {
-      background-color: rgba(255, 255, 255, .6);
-      border-radius: 10px;
-      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
-      margin: auto;
-      max-width: 50rem;
-      padding: 1rem 1rem;
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--ink);
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      text-rendering:optimizeLegibility;
+      background:
+        radial-gradient(900px 500px at 12% 0%, rgba(37,99,235,0.08), rgba(255,255,255,0) 60%),
+        radial-gradient(900px 500px at 88% 12%, rgba(37,99,235,0.06), rgba(255,255,255,0) 55%),
+        var(--bg);
+      background-attachment: fixed, fixed, fixed;
+      background-repeat: no-repeat;
     }
 
-    a { color: inherit; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    .wrap{max-width:var(--max); margin:auto; padding:36px 20px 80px}
 
-    img.banner { width: 30%; min-width: 20rem; border-radius: 1em; }
-    h2 { font-size: 1.25em; font-weight: 400; }
+    /* Utility classes (replace inline styles) */
+    .lead{font-size:1.15rem; margin-bottom:14px}
+    .sublead{font-size:1.05rem; margin-top:-6px}
+    .tight-top{margin-top:-6px}
+    .mt-22{margin-top:22px}
+    .mt-16{margin-top:16px}
 
-    ul { list-style: none; padding: 1em 0; }
+    /* Screen-reader-only text */
+    .sr-only{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
 
-    ul.social { height: 3em; }
-    ul.social li { display: inline-block; padding: 0 .75em; }
-    ul.social li a:hover { text-decoration: none; }
+    /* Accessibility: skip link appears only when focused */
+    .skip-link{
+      position:absolute;
+      left:-9999px;
+      top:12px;
+      padding:10px 12px;
+      border-radius:10px;
+      background:var(--bg);
+      border:1px solid var(--subtle);
+      color:var(--ink);
+      font-weight:700;
+      text-decoration:none;
+      z-index:1000;
+    }
+    .skip-link:focus-visible{left:12px}
 
-    i.cib { font-size: 3em; }
+    /* Sticky header */
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+      border-bottom:1px solid var(--subtle);
+      padding:10px;
+      margin-bottom:42px;
 
-    copyright { clear: both; font-size: .75em; }
+      position:sticky;
+      top:0;
+      z-index:50;
 
-    @media only screen and (max-width: 400px) {
-      body { display: table; }
-      ul.social { height: 7em; width: 100%; }
-      ul.social li { display: inline-block; margin: .75em; }
+      background:rgba(255,255,255,0.82);
+      backdrop-filter:saturate(140%) blur(2px);
+      -webkit-backdrop-filter:saturate(140%) blur(10px);
+    }
+
+    header strong{
+      font-size:1.5rem;
+      position:relative;
+      z-index:1;
+      /* Match hero h1 typography to prevent micro-jitter at the handoff */
+      line-height:1.08;
+      letter-spacing:-0.02em;
+      font-weight:700;
+    }
+
+    nav{display:flex; flex-wrap:wrap; position:relative; z-index:1}
+
+    nav a{
+      margin-left:18px;
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:600;
+      font-size:0.875rem;
+    }
+    nav a:hover{color:var(--ink)}
+
+    h1{
+      font-weight:700;
+      font-size:2.75rem;
+      line-height:1.08;
+      margin:0 0 14px;
+      letter-spacing:-0.02em;
+    }
+
+    h2{
+      font-size:1.5rem;
+      margin:0 0 12px;
+      letter-spacing:-0.01em;
+    }
+
+    h3{font-size:1rem; margin:0 0 6px}
+
+    p{margin:0 0 12px}
+    .muted{color:var(--muted)}
+
+    .pill{
+      display:inline-block;
+      padding:6px 12px;
+      border-radius:999px;
+      background:var(--accent-soft);
+      color:var(--accent);
+      font-weight:600;
+      font-size:0.8125rem;
+      margin-right:8px;
+      margin-bottom:8px;
+    }
+
+    section{margin-bottom:64px; scroll-margin-top:96px}
+
+    .cta{margin-top:18px}
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      border:1px solid var(--subtle);
+      font-weight:700;
+      font-size:0.875rem;
+      text-decoration:none;
+      color:var(--ink);
+      margin-right:10px;
+      margin-top:8px;
+    }
+
+    .btn.primary{
+      background:var(--accent);
+      color:white;
+      border-color:var(--accent);
+    }
+
+    .btn:hover{filter:brightness(0.98)}
+    .btn.primary:hover{filter:brightness(0.95)}
+
+    .metrics{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:16px;
+      margin-top:20px;
+    }
+
+    .metric{
+      border:1px solid var(--subtle);
+      border-radius:var(--radius);
+      padding:16px;
+      background:#fafafa;
+    }
+
+    .metric strong{font-size:16px; display:block; margin-bottom:6px}
+
+    .cases{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px;
+    }
+
+    .case{
+      border:1px solid var(--subtle);
+      border-radius:var(--radius);
+      padding:18px;
+      background:#fafafa;
+    }
+
+    /* Where I've Been (career timeline) */
+    .timeline{
+      display:grid;
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .role{
+      border:1px solid var(--subtle);
+      border-radius:var(--radius);
+      padding:18px;
+      background:#fafafa;
+    }
+
+    .role-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+
+    .role-title{
+      margin:0;
+      font-size:1rem;
+      font-weight:800;
+      letter-spacing:-0.01em;
+    }
+
+    .role .tagline{
+      margin:6px 0 0;
+      color:var(--muted);
+    }
+
+    .role-meta{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      color:var(--muted);
+      font-weight:700;
+      font-size:0.875rem;
+    }
+
+    .role-meta .dot{opacity:0.6}
+
+    .role ul{
+      margin:10px 0 0 18px;
+      color:var(--muted);
+    }
+
+    .role li{margin:6px 0}
+    .note{
+      border-left:4px solid var(--accent);
+      background:var(--accent-soft);
+      padding:12px 14px;
+      border-radius:12px;
+      margin-top:14px;
+    }
+
+    ul{margin:10px 0 0 18px; color:var(--muted)}
+    li{margin:6px 0}
+
+    footer{
+      border-top:1px solid var(--subtle);
+      padding-top:18px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:10px;
+      font-size:0.8125rem;
+      color:var(--muted);
+    }
+
+    .hero h1.name{
+      position:relative;
+      z-index:100;
+    }
+
+    /* When locked, hide via visibility only to avoid snap/jitter from opacity transitions */
+    body.scrolled .hero h1.name{
+      visibility:hidden;
+      pointer-events:none;
+    }
+
+    /* Brand in header (visibility handled via body.scrolled) */
+    header .brand{visibility:hidden; white-space:nowrap}
+    body.scrolled header .brand{visibility:visible}
+    header .brand a{text-decoration:none; color:var(--ink)}
+
+    /* Nav grouping + sublink differentiation */
+    nav{align-items:center}
+    .nav-list{list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; align-items:center}
+    .nav-group{display:flex; flex-wrap:wrap; align-items:center; gap:10px}
+    .nav-divider{width:1px; height:16px; background:var(--subtle); margin:0 14px}
+    nav a{margin:0}
+    nav a.sub{
+      font-size:0.75rem;
+      font-weight:700;
+      letter-spacing:0.01em;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid transparent;
+      background:rgba(37,99,235,0.06);
+      color:var(--muted);
+    }
+    nav a.sub:hover{border-color:rgba(37,99,235,0.18); color:var(--ink)}
+    nav a.main{font-size:14px; font-weight:800; color:var(--ink)}
+    nav a.main:hover{color:var(--ink)}
+    .social-icons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      margin-top:10px;
+    }
+
+    .social{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:38px;
+      height:38px;
+      border-radius:12px;
+      border:1px solid var(--subtle);
+      background:#fff;
+      color:var(--muted);
+      text-decoration:none;
+    }
+
+    .social:hover{color:var(--ink)}
+
+    .social svg{width:18px; height:18px; display:block}
+
+    /* Focus styles (WCAG-friendly, minimal visual impact unless keyboard navigating) */
+    a:focus-visible{
+      outline:2px solid rgba(37,99,235,0.55);
+      outline-offset:3px;
+      border-radius:10px;
+    }
+
+    @media(max-width:700px){
+      h1{font-size:36px}
+      header{flex-direction:column; align-items:flex-start}
+      nav{gap:10px}
+      .nav-divider{display:none}
+      nav a{margin:0; margin-right:10px; margin-top:6px}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      header .brand{transition:none}
     }
   </style>
+</head>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1002142-5"></script>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="wrap" id="top">
+
+    <header>
+      <strong class="brand"><a href="#top">Ryan Provost</a></strong>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li class="nav-group">
+            <a class="main" href="#me">Who I Am</a>
+            <a class="sub" href="#impact">Impact</a>
+          </li>
+
+          <li class="nav-divider" aria-hidden="true"></li>
+
+          <li class="nav-group">
+            <a class="main" href="#work">What I Do</a>
+            <a class="sub" href="#cases">Case Studies</a>
+            <a class="sub" href="#proof">Proof</a>
+            <a class="sub" href="#been">Where I’ve Been</a>
+            <a class="sub" href="#speaking">Speaking</a>
+            <a class="sub" href="#board">Board</a>
+          </li>
+
+          <li class="nav-divider" aria-hidden="true"></li>
+
+          <li class="nav-group">
+            <a class="main" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <h1 class="name">Ryan Provost</h1>
+        <p class="muted lead">
+          Leader • Speaker • Perpetual Learner • Developer • Human • Comfortably Uncomfortable
+        </p>
+        <p>
+          I am an executive and leader who builds high-performing teams, leads complex transformations,
+          and delivers lasting outcomes that hold up under pressure.
+          I am a trusted advisor to executives, operating across leadership, architecture, delivery,
+          and hands-on execution.
+        </p>
+        <p class="muted">
+          I believe that the experience is just as important as architecture.
+        </p>
+
+        <div>
+          <span class="pill">Technology as a Business</span>
+          <span class="pill">P&amp;L Ownership</span>
+          <span class="pill">Platform Modernization</span>
+          <span class="pill">Experience Architecture</span>
+          <span class="pill">Delivery at Scale</span>
+          <span class="pill">Executive Alignment</span>
+        </div>
+
+        <div class="cta">
+          <a class="btn primary" href="#contact">Let’s talk</a>
+          <a class="btn" href="https://www.linkedin.com/in/ryan-provost/" target="_blank" rel="noreferrer noopener">LinkedIn (Connect)</a>
+          <a class="btn" href="/Ryan-Provost-Resume.pdf" target="_blank" rel="noreferrer noopener">Resume (PDF)</a>
+          <a class="btn" href="#board">Board / Advisory</a>
+        </div>
+      </section>
+
+      <section id="work">
+        <h2>What I Do</h2>
+        <p class="muted sublead">
+          Associate Partner &amp; Technical Director <a href="https://www.ibm.com" target="_blank" rel="noreferrer noopener">@IBM</a>
+          • Licensed Real Estate Salesperson <a href="https://provost.randrealty.com" target="_blank" rel="noreferrer noopener">@HHRandRealty</a>
+        </p>
+
+        <p>
+          I do not run technology as a cost function. <b>I build technology organizations that create value.</b>
+          That means treating the technology portfolio like a business: clear owners, clear unit economics,
+          and measurements tied to revenue, margin, and customer outcomes.
+          I work closely across business units and finance to make investment decisions explicit,
+          quantify tradeoffs, and run the function with true operational discipline.
+        </p>
+
+        <p>
+          I take ownership of high-risk, high-visibility work where execution and credibility matter.
+          I translate ambiguity into decisions, decisions into action, and action into durable systems.
+          Accessibility is non-negotiable—great experiences include everyone.
+        </p>
+
+        <div class="metrics" id="proof">
+          <div class="metric">
+            <strong>Technology as a Profit Center</strong>
+            Operated technology portfolios with P&amp;L accountability, measuring performance like a business unit.
+            Aligned investment to revenue enablement, margin, and customer outcomes in partnership with finance.
+          </div>
+          <div class="metric">
+            <strong>Scale &amp; Delivery</strong>
+            Led global organizations of 2–400 people and delivered programs ranging from $100K to $400M+,
+            including multi‑year, enterprise‑critical initiatives.
+          </div>
+          <div class="metric">
+            <strong>Speed &amp; Efficiency</strong>
+            Compressed time‑to‑market by up to 75%, increased delivery velocity by 30–40%,
+            and removed structural bottlenecks that slowed execution.
+          </div>
+          <div class="metric">
+            <strong>Cost &amp; Economics</strong>
+            Drove 50–90% infrastructure cost reductions and uncovered $4M in previously unrealized revenue
+            through platform and operating‑model redesign.
+          </div>
+          <div class="metric">
+            <strong>Quality &amp; Reliability</strong>
+            Moved systems from zero automation to 80–100% test coverage and reduced production defects
+            by more than 90% in highly-regulated environments.
+          </div>
+          <div class="metric">
+            <strong>People &amp; Culture</strong>
+            Built durable organizations with 3× industry‑average retention by establishing clarity,
+            accountability, and standards teams can execute against.
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Private diligence available:</strong> Full client-specific case studies, metrics, artifacts, and references are available privately upon request.
+        </div>
+      </section>
+
+      <section id="cases">
+        <h2>Selected Case Studies</h2>
+        <div class="cases">
+          <div class="case">
+            <h3>Global Financial Services Platform</h3>
+            <p>
+              Took control of a failing, multi‑million‑dollar delivery in a highly regulated financial environment.
+              Rebuilt governance, refactored core systems, increased automated test coverage from 0% to 80%+,
+              and delivered on schedule, restoring executive confidence and extending the engagement.
+            </p>
+          </div>
+
+          <div class="case">
+            <h3>Public Sector Digital Credential Platform</h3>
+            <p>
+              Led end‑to‑end delivery of a public‑sector digital credential platform serving 100,000+ users
+              and processing over one million verifications, designed for reliability, security,
+              accessibility, and compliance at scale.
+            </p>
+          </div>
+
+          <div class="case">
+            <h3>Global Media &amp; Streaming Platform Portfolio</h3>
+            <p>
+              Directed the modernization and scaling of a global portfolio of consumer platforms,
+              growing teams from 10 to 70+, standardizing delivery,
+              and reducing launch timelines from months to under one week.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="speaking">
+        <h2>Speaking</h2>
+        <p class="muted tight-top">
+          Selected talks and speaking focus.
+        </p>
+
+        <p>
+          My current speaking focuses on leadership under sustained pressure,
+          the long-term cost of neglecting health in demanding environments,
+          and how decision quality, resilience, and performance change over time.
+        </p>
+
+        <p>
+          I speak candidly about the tradeoffs leaders make, the ones they avoid,
+          and the consequences that surface years later when health and boundaries are treated as optional.
+          This is not motivational content. It is practical and experience-based.
+        </p>
+
+        <p>
+          <a href="https://www.pscp.tv" target="_blank" rel="noreferrer noopener">Tech Duels (Angular vs React)</a> •
+          <a href="https://www.meetup.com" target="_blank" rel="noreferrer noopener">The Future of APIs</a> •
+          <a href="https://go.debate.nyc" target="_blank" rel="noreferrer noopener">Tech Duels (Judge)</a> •
+          <a href="https://byteacademy.co" target="_blank" rel="noreferrer noopener">2018 Commencement Speaker @ ByteAcademy</a>
+        </p>
+
+        <p class="muted">
+          For speaking inquiries, email me with “Speaking” in the subject line.
+        </p>
+      </section>
+
+      <section id="board">
+        <h2>Board &amp; Advisory</h2>
+        <p>
+          I serve as a strategic advisor and am actively pursuing board roles where execution discipline,
+          platform strategy, and operational resilience are material to enterprise value.
+          <br><br>
+          I contribute independent judgment, pattern recognition from scaled environments,
+          and a business-of-technology lens that ties platforms, operating models, and governance to enterprise value.
+          I am most useful where technology strategy must be grounded in financial reality and executed without drama.
+        </p>
+
+        <div class="metrics">
+          <div class="metric">
+            <strong>What I Bring</strong>
+            Platform + delivery leadership, modernization strategy, operating model design, governance, and measurable execution.
+          </div>
+          <div class="metric">
+            <strong>Best-fit organizations</strong>
+            Regulated businesses, enterprise B2B, digital-first services, and companies modernizing legacy platforms.
+          </div>
+          <div class="metric">
+            <strong>Where I’m most useful</strong>
+            Scaling from “works” to “repeatable,” modernization without disrupting revenue, and increasing predictability and reliability.
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Board Bio + Private Business Cases:</strong> available upon request.
+        </div>
+      </section>
+
+      <section id="been">
+        <h2>Where I’ve Been</h2>
+        <p class="muted tight-top">
+          A career built across enterprise, startups, and entrepreneurship — consistently stepping into roles where scale, reliability, and credibility matter.
+        </p>
+
+        <div class="timeline">
+          <article class="role">
+            <div class="role-top">
+              <div>
+                <h3 class="role-title">IBM</h3>
+                <p class="tagline">Associate Partner &amp; Technical Director</p>
+              </div>
+              <div class="role-meta">
+                <span>2017 – Present</span>
+                <span class="dot" aria-hidden="true">•</span>
+                <span>Consulting &amp; delivery leadership</span>
+              </div>
+            </div>
+            <ul>
+              <li>Lead globally distributed teams and deliver high-stakes programs with executive visibility and real business outcomes.</li>
+              <li>Translate ambiguity into an executable plan: architecture, delivery model, funding alignment, and staffing.</li>
+              <li>Operate at executive altitude without losing engineering credibility — decisions, tradeoffs, and measurable results.</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <div class="role-top">
+              <div>
+                <h3 class="role-title">Warner Bros.</h3>
+                <p class="tagline">Director, Technical Product Strategy &amp; Director, Client App Development</p>
+              </div>
+              <div class="role-meta">
+                <span>2014 – 2017</span>
+                <span class="dot" aria-hidden="true">•</span>
+                <span>Media &amp; streaming portfolio</span>
+              </div>
+            </div>
+            <ul>
+              <li>Scaled client application teams and established standards that made delivery predictable across a portfolio.</li>
+              <li>Introduced value-based portfolio thinking (financial models + estimation) to prioritize what mattered most.</li>
+              <li>Drove modernization that reduced launch timelines from months to under a week for new releases.</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <div class="role-top">
+              <div>
+                <h3 class="role-title">Tykoon</h3>
+                <p class="tagline">VP, Engineering</p>
+              </div>
+              <div class="role-meta">
+                <span>2012 – 2013</span>
+                <span class="dot" aria-hidden="true">•</span>
+                <span>Startup scale-up</span>
+              </div>
+            </div>
+            <ul>
+              <li>Built foundational platform capabilities and instrumentation to improve engagement and decision-making.</li>
+              <li>Reworked infrastructure and operations to reduce cost while improving resiliency.</li>
+              <li>Hired and led a high-performing team through rapid growth and shifting priorities.</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <div class="role-top">
+              <div>
+                <h3 class="role-title">Ann Taylor</h3>
+                <p class="tagline">Director, Web Application Development</p>
+              </div>
+              <div class="role-meta">
+                <span>2011 – 2012</span>
+                <span class="dot" aria-hidden="true">•</span>
+                <span>Retail &amp; eCommerce</span>
+              </div>
+            </div>
+            <ul>
+              <li>Modernized web delivery and helped push the organization toward scalable cloud-first patterns.</li>
+              <li>Led mobile-first experience work supporting accelerated digital commerce growth.</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <div class="role-top">
+              <div>
+                <h3 class="role-title">Sony Music</h3>
+                <p class="tagline">Lead Developer</p>
+              </div>
+              <div class="role-meta">
+                <span>2008 – 2011</span>
+                <span class="dot" aria-hidden="true">•</span>
+                <span>High-availability platforms</span>
+              </div>
+            </div>
+            <ul>
+              <li>Modernized a high-availability platform and reduced key processing cycles dramatically.</li>
+              <li>Identified and recovered previously unrealized revenue through transaction-flow analysis and remediation.</li>
+              <li>Represented the business in standards and partner conversations, turning requirements into durable implementations.</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <div class="role-top">
+              <div>
+                <h3 class="role-title">Ryan Provost, Inc.</h3>
+                <p class="tagline">President / Founder</p>
+              </div>
+              <div class="role-meta">
+                <span>2004 – 2008</span>
+                <span class="dot" aria-hidden="true">•</span>
+                <span>Entrepreneurship</span>
+              </div>
+            </div>
+            <ul>
+              <li>Built and ran a digital consultancy end-to-end: sales, delivery, operations, finance, and hiring.</li>
+              <li>Delivered for brands with 10M+ monthly visitors; earned repeat business through outcomes and trust.</li>
+              <li>Additional client specifics are available privately upon request.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="note">
+          <strong>Executive signal:</strong> This isn’t a list of jobs. It’s a pattern — stepping into complexity, aligning incentives, and making delivery predictable.
+        </div>
+      </section>
+
+      <section id="me">
+        <h2>Who I Am</h2>
+        <p class="muted sublead">
+          Experience Architect • Coach • Developer • Pilot • Perpetual Learner • Comfortably Uncomfortable
+        </p>
+
+        <p>
+          I turn friction into forward motion.
+          Friction is where systems reveal their truth, where incentives collide and pressure rises.
+          I am comfortable there.
+        </p>
+
+        <p>
+          I value truth over comfort, clarity over consensus, and outcomes over theater.
+          I’m direct, calm under pressure, and relentless about aligning incentives so teams can execute without politics eating the mission.
+        </p>
+
+        <p>
+          Coaching is not an abstract concept for me. It is something I do every day, formally and informally.
+          I am an upline for many people, whether or not that title appears on an org chart.
+          I coach on careers, health, progress, and life, because those things are inseparable in the real world.
+        </p>
+
+        <p>
+          This is why the people who work with me tend to stay, and why I attract strong talent even when a role
+          does not check every conventional box. People want leaders who invest in them as humans, not resources,
+          and who tell the truth about what it actually takes to grow.
+        </p>
+
+        <p>
+          I am deeply intentional about health because it is the one asset that becomes harder to build and easier to lose over time.
+          In demanding work and life schedules, physical and mental health are often treated as negotiable.
+          I do not accept that premise.
+        </p>
+
+        <p>
+          It directly affects judgment, emotional regulation, energy, and presence when the stakes are high.
+          If you do not protect it deliberately, it erodes quietly and then all at once.
+        </p>
+
+        <p>
+          My coaching focuses on sustainable performance.
+          I care about how leaders <b>operate across decades, not quarters</b>,
+          and how disciplined habits around health, boundaries, and recovery compound into better leadership and better lives.
+        </p>
+
+        <div id="impact" class="mt-22">
+          <h3>Impact</h3>
+          <p class="muted tight-top">
+            A few things I care about outside of my day job.
+          </p>
+          <p>
+            Executive Producer <span class="muted">@</span> <a href="https://www.youtube.com" target="_blank" rel="noreferrer noopener">Cool Worlds Labs</a>
+            (<a href="https://www.coolworldslab.com" target="_blank" rel="noreferrer noopener">Columbia University</a>) •
+            <a href="https://www.charitywater.org" target="_blank" rel="noreferrer noopener">Charity: Water</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p class="muted">
+          If you’re hiring, exploring advisory/board fit, or want access to private case studies, the cleanest way to reach me is via LinkedIn.
+        </p>
+        <a class="btn primary" href="https://www.linkedin.com/in/ryanprovost/" target="_blank" rel="noreferrer noopener">Message me on LinkedIn</a>
+        <a class="btn" href="https://www.linkedin.com/in/ryanprovost/" target="_blank" rel="noreferrer noopener">View profile</a>
+
+        <div class="note mt-16">
+          <strong>Elsewhere:</strong>
+          <div class="social-icons" aria-label="Social profiles">
+            <a class="social" href="https://x.com/rprovost" target="_blank" rel="noreferrer noopener" aria-label="X">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23.2 22h-6.6l-5.2-6.7L5.6 22H2.4l7.3-8.4L1 2h6.8l4.7 6.1L18.9 2Zm-1.2 18h1.7L7.1 3.9H5.3L17.7 20Z"/></svg>
+              <span class="sr-only">X</span>
+            </a>
+
+            <a class="social" href="https://www.instagram.com/provost.ryan/" target="_blank" rel="noreferrer noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm-5 4.5A5.5 5.5 0 1 1 6.5 12 5.5 5.5 0 0 1 12 8.5Zm0 2A3.5 3.5 0 1 0 15.5 12 3.5 3.5 0 0 0 12 10.5ZM18 6.7a1.1 1.1 0 1 1-1.1 1.1A1.1 1.1 0 0 1 18 6.7Z"/></svg>
+              <span class="sr-only">Instagram</span>
+            </a>
+
+            <a class="social" href="https://github.com/rprovost" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.8 2.4 3.4 1.7.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+              <span class="sr-only">GitHub</span>
+            </a>
+
+            <a class="social" href="https://leetcode.com/u/ryan-provost/" target="_blank" rel="noreferrer noopener" aria-label="LeetCode">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M14.6 2.6a1 1 0 0 1 1.4 0l1.4 1.4a1 1 0 0 1 0 1.4l-2.2 2.2a1 1 0 1 1-1.4-1.4l1.5-1.5-.7-.7-6.8 6.8a3 3 0 0 0 0 4.2l4 4a3 3 0 0 0 4.2 0l3.7-3.7a1 1 0 0 1 1.4 1.4l-3.7 3.7a5 5 0 0 1-7.1 0l-4-4a5 5 0 0 1 0-7.1l6.8-6.8Zm-7.2 8.9a1 1 0 0 1 1 1v.5h7.2a1 1 0 1 1 0 2H8.4v.5a1 1 0 1 1-2 0v-3a1 1 0 0 1 1-1Z"/></svg>
+              <span class="sr-only">LeetCode</span>
+            </a>
+
+            <a class="social" href="https://stackoverflow.com/users/27550741/ryan-provost" target="_blank" rel="noreferrer noopener" aria-label="Stack Overflow">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.8 20.2V14h2v8.2H4.2V14h2v6.2h11.6ZM7.4 13.6l.3-2 9.9 1.8-.3 2-9.9-1.8Zm1-3.8.7-1.9 9.3 3.5-.7 1.9-9.3-3.5Zm2-3.6 1.1-1.7 8.2 5.6-1.1 1.7-8.2-5.6Zm3-3.3 1.5-1.4 6.8 7.1-1.5 1.4-6.8-7.1ZM7.4 18H16v2H7.4v-2Z"/></svg>
+              <span class="sr-only">Stack Overflow</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>&copy; <script>document.write(new Date().getFullYear())</script> Ryan Provost</span>
+      <span>RyanProvost.com → aboutryan.com • Primary contact: LinkedIn</span>
+    </footer>
+
+  </div>
+
+  <script>
+    (function(){
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const header = document.querySelector('header');
+      const heroTitle = document.querySelector('.hero h1.name');
+
+      // Typography handoff
+      const HERO_MAX_PX = 44;          // 2.75rem @ 16px root
+      const HERO_MIN_PX = 24;          // matches header strong: 1.5rem @ 16px root
+      const LOCK_Y = 122;              // scrollY at which header brand becomes visible
+      const HERO_RANGE_PX = LOCK_Y;    // ensure hero hits HERO_MIN_PX exactly at lock
+
+      function updateHeroTitleScale(y){
+        if(!heroTitle) return;
+
+        const t = Math.min(Math.max(y / HERO_RANGE_PX, 0), 1);
+        const sizePx = HERO_MAX_PX - (HERO_MAX_PX - HERO_MIN_PX) * t;
+
+        // Avoid quantization: tiny step changes read as a 1px snap.
+        heroTitle.style.fontSize = sizePx + 'px';
+        heroTitle.style.lineHeight = '1.08';
+        heroTitle.style.left = (10 * t) + 'px';
+      }
+
+      function onScroll(){
+        const y = window.scrollY;
+
+        // Compute the correct hero size/position FIRST for this frame.
+        if(!prefersReduced) updateHeroTitleScale(y);
+
+        // Then toggle the lock state (CSS handles visibility for hero + brand)
+        document.body.classList.toggle('scrolled', y >= LOCK_Y);
+      }
+
+      // Initialize
+      onScroll();
+      window.addEventListener('scroll', onScroll, {passive:true});
+
+      // Smooth anchor scrolling with header offset (unchanged behavior)
+      document.addEventListener('click', function(e){
+        const a = e.target.closest('a[href^="#"]');
+        if(!a) return;
+
+        const id = a.getAttribute('href');
+        if(!id || id === '#') return;
+
+        const el = document.querySelector(id);
+        if(!el) return;
+
+        e.preventDefault();
+
+        const headerH = header ? header.getBoundingClientRect().height : 0;
+        const top = el.getBoundingClientRect().top + window.pageYOffset - headerH - 14;
+
+        window.scrollTo({
+          top,
+          behavior: prefersReduced ? 'auto' : 'smooth'
+        });
+
+        // Keep URL/hash in sync without jumping
+        if(history && history.pushState){
+          history.pushState(null, '', id);
+        } else {
+          location.hash = id;
+        }
+      });
+    })();
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-13T3CXD8S1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-1002142-5');
+    gtag('config', 'G-13T3CXD8S1');
   </script>
-</head>
-
-<body>
-
-<div class="container">
-  <h1>Ryan Provost</h1>
-  <hr>
-  <!-- <p>I build high-functioning teams that deliver engaging digital experiences. Focused on running healthy and successful businesses, I am a sought-after coach and mentor with extensive experience across executive, digital transformation, architecture, delivery, and hands-on technical roles. I lead development teams that build client apps and enterprise backend systems and believe that experience architecture is just as important as technical architecture. I lead with empathy to encourage and motivate everyone to deliver the best version of themselves.</p> -->
-  <p>I am a seasoned executive with extensive experience building and leading high-performing teams, driving digital transformations, and delivering successful business outcomes. I am a sought-after advisor to technical leaders and executives, with expertise that spans executive leadership, technical architecture, delivery management, and hands-on technical skills. This makes me an ideal candidate for senior technology leadership positions. I believe that experience architecture is just as important as technical architecture.</p>
-  <hr>
-
-  <h2>Who I Am</h2>
-  Experience Architect • Coach • Developer • Pilot • Perpetual Learner • Comfortably Uncomfortable
-
-  <h2>What I Do</h2>
-  Associate Partner & Technical Director <a href="https://www.ibm.com/consulting" title="IBM Consulting" tabindex="1">@IBM</a>
-  • Licensed Real Estate Salesperson <a href="https://provost.randrealty.com/" tabindex="2">@HHRandRealty</a>
-
-  <h2>Speaking</h2>
-  <a href="https://www.pscp.tv/w/1PlJQAqyYBBJE" tabindex="3">Tech Duels (Angular vs React)</a>
-  • <a href="https://www.meetup.com/techinmotionnyc/events/238648488/" tabindex="4">The Future of APIs</a>
-  • <a href="https://go.debate.nyc/tech-duels-debate-tournament" tabindex="5">Tech Duels (Judge)</a>
-  • 2018 Commencement Speaker <a href="https://byteacademy.co/" tabindex="6">@ByteAcademy</a>
-
-  <h2>Impact</h2>
-  Executive Producer @<a href="https://www.youtube.com/coolworldslab" tabindex="7">Cool Worlds Labs</a> (<a href="https://www.coolworldslab.com" tabindex="8">Columbia University</a>)
-  • <a href="https://www.charitywater.org/ryanprovost" tabindex="9">Charity: Water</a>
-  
-  <ul class="social">
-    <li><a href="https://www.linkedin.com/in/ryanprovost/" title="Professional Profile" tabindex="10"><i class="cib cib-linkedin"></i></a></li>
-    <li><a href="https://www.twitter.com/@rprovost/" title="Tweets" tabindex="11"><i class="cib cib-twitter"></i></a></li>
-    <li><a href="https://www.instagram.com/provost.ryan/" title="Photography" tabindex="12"><i class="cib cib-instagram"></i></a></li>
-    <li><a href="https://stackoverflow.com/users/27450604" title="Stack Overflow" tabindex="13"><i class="cib cib-stackoverflow"></i></a></li>
-    <!-- <li><a href="https://www.hackerrank.com/profile/ryan568" title="HackerRank" tabindex="14"><i class="cib cib-hackerrank"></i></a></li> -->
-    <li><a href="https://leetcode.com/u/ryan-provost/" title="LeetCode" tabindex="14"><i class="cib cib-leetcode"></i></a></li>
-    <li><a href="https://github.com/rprovost" title="Code" tabindex="15"><i class="cib cib-github"></i></a></li>
-  </ul>  
-
-  <copyright>&copy;2019-<script>document.write(/\d{4}/.exec(Date())[0])</script> Ryan Provost</copyright>
-</div>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-13T3CXD8S1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-13T3CXD8S1');
-</script>
-
 </body>
 </html>
