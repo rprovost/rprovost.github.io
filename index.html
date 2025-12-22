@@ -307,6 +307,11 @@
       z-index:100;
     }
 
+    /* Mobile: keep the floating nav button above the hero title block so it’s always tappable */
+    @media (max-width:926px){
+      .hero h1.name{z-index:0}
+    }
+
     /* When locked, hide via visibility only to avoid snap/jitter from opacity transitions */
     body.scrolled .hero h1.name{
       visibility:hidden;
@@ -321,6 +326,120 @@
     /* Nav grouping + sublink differentiation */
     nav{align-items:center}
     .nav-list{list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; align-items:center}
+
+    /* Hamburger (hidden by default; enabled at < 926px) */
+    .nav-toggle{
+      display:none;
+      align-items:center;
+      justify-content:center;
+      width:44px;
+      height:44px;
+      border-radius:12px;
+      border:1px solid var(--subtle);
+      background:#fff;
+      color:var(--ink);
+      cursor:pointer;
+      padding:0;
+    }
+
+    .nav-toggle svg{width:20px; height:20px; display:block}
+
+    .nav-backdrop{
+      position:fixed;
+      inset:0;
+      background:rgba(15,23,42,0.28);
+      backdrop-filter:blur(2px);
+      -webkit-backdrop-filter:blur(2px);
+      z-index:198;
+      display:none;
+    }
+    body.nav-open .nav-backdrop{display:block}
+    .nav-backdrop[hidden]{display:none}
+
+    /* Menu panel at < 926px */
+    @media (max-width:926px){
+      /* Floating hamburger only (no header bar) */
+      header{
+        position:fixed;
+        top:20px;
+        right:20px;
+        left:auto;
+        width:auto;
+        margin:0;
+        padding:0;
+        border:0;
+        background:transparent;
+        backdrop-filter:none;
+        -webkit-backdrop-filter:none;
+        box-shadow:none;
+        z-index:200;
+      }
+
+      /* Hide brand + desktop nav chrome on mobile */
+      header .brand{display:none !important;}
+
+      nav{flex:0 0 auto;}
+
+      /* Hide the inline nav; show hamburger */
+      #primary-nav{display:none;}
+      .nav-toggle{display:inline-flex; margin:0;}
+
+      /* Ensure button stays tappable above everything */
+      .nav-toggle{position:relative; z-index:201;}
+
+      /* When open, show a right-aligned panel */
+      body.nav-open #primary-nav{display:block;}
+
+      #primary-nav{
+        position:fixed;
+        top:76px; /* button (44px) + 20px top + ~12px gap */
+        right:20px;
+        width:min(360px, calc(100vw - 40px));
+        max-height:calc(100vh - 96px);
+        overflow:auto;
+        background:rgba(255,255,255,0.92);
+        border:1px solid var(--subtle);
+        border-radius:16px;
+        padding:12px;
+        box-shadow:0 12px 36px rgba(15,23,42,0.18);
+        z-index:199;
+      }
+
+      .nav-list{display:block;}
+
+      .nav-group{
+        display:block;
+        padding:10px 10px;
+        border-radius:14px;
+      }
+
+      .nav-divider{display:none;}
+
+      .nav-group + .nav-group{margin-top:6px;}
+
+      nav a.main{
+        display:block;
+        padding:10px 10px;
+        border-radius:12px;
+        font-size:0.95rem;
+      }
+
+      nav a.sub{
+        display:block;
+        margin-top:8px;
+        margin-left:12px;
+        width:fit-content;
+      }
+
+      /* Make tap targets easier */
+      nav a{padding:8px 10px;}
+    }
+
+    /* Small-screen behavior (<=926px): keep hero name visible and do not reveal header brand on scroll */
+    @media (max-width:926px){
+      body.scrolled header .brand{visibility:hidden}
+      body.scrolled .hero h1.name{visibility:visible; pointer-events:auto}
+    }
     .nav-group{display:flex; flex-wrap:wrap; align-items:center; gap:10px}
     .nav-divider{width:1px; height:16px; background:var(--subtle); margin:0 14px}
     nav a{margin:0}
@@ -371,10 +490,7 @@
 
     @media(max-width:700px){
       h1{font-size:36px}
-      header{flex-direction:column; align-items:flex-start}
-      nav{gap:10px}
       .nav-divider{display:none}
-      nav a{margin:0; margin-right:10px; margin-top:6px}
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -391,7 +507,15 @@
 
     <header>
       <strong class="brand"><a href="#top">Ryan Provost</a></strong>
-      <nav aria-label="Primary">
+
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">
+        <span class="sr-only">Open menu</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M4 7h16v2H4V7zm0 6h16v2H4v-2zm0 6h16v2H4v-2z"/>
+        </svg>
+      </button>
+
+      <nav aria-label="Primary" id="primary-nav">
         <ul class="nav-list">
           <li class="nav-group">
             <a class="main" href="#me">Who I Am</a>
@@ -417,6 +541,8 @@
         </ul>
       </nav>
     </header>
+
+    <div class="nav-backdrop" hidden></div>
 
     <main id="main">
       <section class="hero">
@@ -841,6 +967,25 @@
       const header = document.querySelector('header');
       const heroTitle = document.querySelector('.hero h1.name');
 
+      // Hamburger menu (enabled at < 926px)
+      const navToggle = document.querySelector('.nav-toggle');
+      const primaryNav = document.getElementById('primary-nav');
+      const navBackdrop = document.querySelector('.nav-backdrop');
+      const isHamburgerMQ = window.matchMedia('(max-width: 926px)');
+
+      function setNavOpen(open){
+        document.body.classList.toggle('nav-open', open);
+        if(navToggle){
+          navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          const label = navToggle.querySelector('.sr-only');
+          if(label) label.textContent = open ? 'Close menu' : 'Open menu';
+        }
+        if(navBackdrop){
+          navBackdrop.hidden = !open;
+        }
+        if(navBackdrop && !open) navBackdrop.removeAttribute('style');
+      }
+
       // Typography handoff
       const HERO_MAX_PX = 44;          // 2.75rem @ 16px root
       const HERO_MIN_PX = 24;          // matches header strong: 1.5rem @ 16px root
@@ -867,6 +1012,49 @@
 
         // Then toggle the lock state (CSS handles visibility for hero + brand)
         document.body.classList.toggle('scrolled', y >= LOCK_Y);
+      }
+
+      // Wire hamburger interactions
+      if(navToggle){
+        navToggle.addEventListener('click', function(e){
+          e.preventDefault();
+          e.stopPropagation();
+          const open = document.body.classList.contains('nav-open');
+          setNavOpen(!open);
+        });
+      }
+
+      if(navBackdrop){
+        navBackdrop.addEventListener('click', function(){
+          setNavOpen(false);
+        });
+      }
+
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape') setNavOpen(false);
+      });
+
+      // Close menu when clicking a nav link (hamburger mode only)
+      if(primaryNav){
+        primaryNav.addEventListener('click', function(e){
+          const a = e.target.closest('a');
+          if(!a) return;
+          if(isHamburgerMQ.matches) setNavOpen(false);
+        });
+      }
+
+      // Ensure menu state resets when leaving hamburger breakpoint
+      function syncNavMode(){
+        if(!isHamburgerMQ.matches){
+          setNavOpen(false);
+          if(navBackdrop) navBackdrop.hidden = true;
+        }
+      }
+      syncNavMode();
+      if(isHamburgerMQ.addEventListener){
+        isHamburgerMQ.addEventListener('change', syncNavMode);
+      } else {
+        isHamburgerMQ.addListener(syncNavMode);
       }
 
       // Initialize
