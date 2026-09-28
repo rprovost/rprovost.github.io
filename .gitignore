@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Jekyll and Sass build output
+/_site/
+/.sass-cache/
+/sass-cache/
+/.jekyll-cache/
+/.jekyll-metadata
+/.bundle/
+/vendor/bundle/
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*~
